@@ -41,7 +41,7 @@ void loop() {
  sensor.requestTemperatures();
  temperature = sensor.getTempFByIndex( 0 );
 
- if (temperature > 0) {
+ if (temperature > 0 && temperature < 115) {
  	sprintf(resultstr, "{\"value\":%.4f}",temperature); 
  	request.body = resultstr;//Sending presence to Ubidots
  	http.post(request, response, headers);
