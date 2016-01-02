@@ -48,5 +48,5 @@ void loop() {
  	Serial.println(response.status); //For debug only
  	Serial.println(response.body); 	
  }
- delay(100);
+ delay(5000);
 }
